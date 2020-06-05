@@ -32,21 +32,26 @@
     <Version>1.1.1</Version>
   </PropertyGroup>
 
-  <Target Name="ConcatenateJavaScripts" AfterTargets="PostBuildEvent">
+  <!--<Target Name="ConcatenateJavaScripts" AfterTargets="PostBuildEvent">
     <Message Text="Concatinating JavaScript files into wwwroot/js/scripts.js" Importance="High" />
-    <!-- List all the files you want to concatenate. -->
+    --><!-- List all the files you want to concatenate. --><!--
     <ItemGroup>
       <ConcatFiles Include="wwwroot\js\libs\*.js" />
       <ConcatFiles Include="wwwroot\js\interop.es5.min.js" />
     </ItemGroup>
 
-    <!-- Read the contents of the files (preserving tabs/spaces). -->
+    --><!-- Read the contents of the files (preserving tabs/spaces). --><!--
     <ItemGroup>
       <FileContents Include="$([System.IO.File]::ReadAllText(%(ConcatFiles.Identity)))" />
     </ItemGroup>
 
-    <!-- Write the result to a single file. -->
+    --><!-- Write the result to a single file. --><!--
     <WriteLinesToFile File="wwwroot\js\ant-design-blazor.min.js" Lines="@(FileContents)" Overwrite="true" />
+  </Target>-->
+
+  <Target Name="CompileLessAndJs" AfterTargets="PostBuildEvent">
+    <Exec WorkingDirectory="$(SolutionDir)" Command="npm install" />
+    <Exec WorkingDirectory="$(SolutionDir)" Command="npm run gulp:components" />
   </Target>
 
 </Project>
