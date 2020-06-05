@@ -1,0 +1,28 @@
+﻿<Codebox Title="White background mode">
+    <Description>
+        <p>
+            The default PageHeader is a transparent background. In some cases, PageHeader needs its own background color.
+        </p>
+    </Description>
+    <Demo>
+        <PageHeader class="site-page-header-ghost-wrapper" Ghost=false>
+            <Title>Tilte</Title>
+            <SubTitle>This is a subtitle</SubTitle>
+            <Extra>
+                <Button @key="3" Label="Operation" />
+                <Button @key="2" Label="Operation" />
+                <Button @key="1" Type=ButtonType.Primary Label="Primary" />
+            </Extra>
+            <ChildContent>
+                <span>Add Descriptions here</span>
+            </ChildContent>
+        </PageHeader>
+    </Demo>
+</Codebox>
+
+<style>
+    .site-page-header-ghost-wrapper {
+  background-color: #f5f5f5;
+  padding: 24px;
+}
+</style>

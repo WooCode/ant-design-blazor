@@ -20,17 +20,20 @@ namespace Append.AntDesign.Components
                 .AddClassWhen($"{prefix}-compact", compact);
 
         [Inject] public IWindowService WindowService { get; set; }
-        [Parameter] public RenderFragment<Avatar> Avatar { get; set; }
+        //allow only Avatar items -> RenderFragment<Avatar> and Avatar do not work
+        [Parameter] public RenderFragment Avatar { get; set; }
         [Parameter] public RenderFragment BackIcon { get; set; }
-        [Parameter] public Breadcrumb Breadcrumb { get; set; }
+        //allow only Breadcrumb items -> RenderFragment<Breadcrumb> and Breadcrumb do not work
+        [Parameter] public RenderFragment Breadcrumb { get; set; }
         [Parameter] public RenderFragment ChildContent { get; set; }
         [Parameter] public RenderFragment Extra { get; set; }
         [Parameter] public RenderFragment Footer { get; set; }
         [Parameter] public bool Ghost { get; set; } = true;
-        //give OnBack the previous visitted website as default
+        //give OnBack the previous visited website as default event
         [Parameter] public EventCallback OnBack { get; set; }
         [Parameter] public RenderFragment SubTitle { get; set; }
-        [Parameter] public RenderFragment<Tag> Tags {get; set; }
+        //Only allow Tag or multiple tags
+        [Parameter] public RenderFragment Tags {get; set; }
         [Parameter] public RenderFragment Title { get; set; }
 
         private bool compact { get; set; }
