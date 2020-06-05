@@ -1,0 +1,66 @@
+﻿@namespace Append.AntDesign.Components
+@inherits AntComponent
+
+<div @attributes="Attributes" class="@classes">
+
+    @if (Breadcrumb != null)
+        @Breadcrumb
+
+    @if (Title != null | SubTitle != null | Tags != null | Extra != null)
+    {
+        <div class="ant-page-header-heading">
+            <div class="ant-page-header-heading-left">
+                <Button class="ant-page-header-back-button" OnClick=OnBack Type=ButtonType.Link aria-label="Back">
+                    @if (BackIcon != null)
+                    {
+                        @BackIcon
+                    }
+                    else
+                    {
+                        <Icon Type=IconType.Outlined.Arrow_Left />
+                    }
+                </Button>
+                @if (Avatar != null)
+                {
+                    @Avatar
+                }
+                @if (Title != null)
+                {
+                    <span class="ant-page-header-heading-title">
+                        @Title
+                    </span>
+                }
+                @if (SubTitle != null)
+                {
+                    <span class="ant-page-header-heading-sub-title">
+                        @SubTitle
+                    </span>
+                }
+                @if (Tags != null)
+                {
+                    <span class="ant-page-header-heading-tags">
+                        @Tags
+                    </span>
+                }
+            </div>
+            @if (Extra != null)
+            {
+                <span class="ant-page-header-heading-extra">
+                    @Extra
+                </span>
+            }
+        </div>
+    }
+    @if (ChildContent != null)
+    {
+        <div class="ant-page-header-content">
+            @ChildContent
+        </div>
+    }
+    @if (Footer != null)
+    {
+        <div class="ant-page-header-footer">
+            @Footer
+        </div>
+    }
+</div>

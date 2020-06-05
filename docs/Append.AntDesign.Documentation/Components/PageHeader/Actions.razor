@@ -1,0 +1,43 @@
+﻿<Codebox Title="Various forms of PageHeader">
+    <Description>
+        <p>
+            Use the operating area and customize the sub-nodes, suitable for use in the need to display some complex information to help users quickly understand the information and operations of this page.
+        </p>
+    </Description>
+    <Demo>
+        <PageHeader class="site-page-header">
+            <Title>Tilte</Title>
+            <SubTitle>This is a subtitle</SubTitle>
+            <Extra>
+                <Button @key="3">Operation</Button>
+                <Button @key="2">Operation</Button>
+                <Button @key="1" Type=ButtonType.Primary>Primary</Button>
+            </Extra>
+            <ChildContent>
+                <span>ADD DESCRIPTIONS HERE</span>
+            </ChildContent>
+        </PageHeader>
+        <PageHeader class="site-page-header">
+            <Title>Tilte</Title>
+            <SubTitle>This is a subtitle</SubTitle>
+            <Tags>
+                <Tag Color="processing">Running</Tag>
+                <Tag Color="red">Running</Tag>
+            </Tags>
+            <Extra>
+                <Button @key="3">Operation</Button>
+                <Button @key="2">Operation</Button>
+                <Button @key="1" Type=ButtonType.Primary>Primary</Button>
+            </Extra>
+            <ChildContent>
+                <span>ADD STATISTICS HERE</span>
+            </ChildContent>
+        </PageHeader>
+    </Demo>
+</Codebox>
+
+<style>
+    .site-page-header {
+        border: 1px solid rgb(235, 237, 240);
+    }
+</style>
