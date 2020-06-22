@@ -218,7 +218,6 @@
 
 @btn-group-border: @primary-5;
 
-@btn-link-ghost-color: @component-background;
 @btn-link-hover-bg: transparent;
 @btn-text-hover-bg: rgba(0, 0, 0, 0.018);
 
@@ -240,6 +239,10 @@
 @descriptions-item-trailing-colon: true;
 @descriptions-item-label-colon-margin-right: 8px;
 @descriptions-item-label-colon-margin-left: 2px;
+
+// Divider
+@divider-text-padding: 1em;
+@divider-orientation-margin: 5%;
 
 // Dropdown
 @dropdown-selected-color: @primary-color;
@@ -445,7 +448,9 @@
 // ---
 @anchor-bg: @component-background;
 @anchor-border-color: @border-color-split;
-@anchor-link-padding: 7px 0 7px 16px;
+@anchor-link-top: 7px;
+@anchor-link-left: 16px;
+@anchor-link-padding: @anchor-link-top 0 @anchor-link-top @anchor-link-left;
 
 // Tooltip
 // ---
@@ -574,6 +579,9 @@
 @table-footer-bg: @background-color-light;
 @table-footer-color: @heading-color;
 @table-header-bg-sm: @table-header-bg;
+@table-font-size: @font-size-base;
+@table-font-size-md: @table-font-size;
+@table-font-size-sm: @table-font-size;
 // Sorter
 // Legacy: `table-header-sort-active-bg` is used for hover not real active
 @table-header-sort-active-bg: darken(@table-header-bg, 3%);
@@ -637,6 +645,7 @@
 @rate-star-color: @yellow-6;
 @rate-star-bg: @border-color-split;
 @rate-star-size: 20px;
+@rate-star-hover-scale: scale(1.1);
 
 // Card
 // ---
