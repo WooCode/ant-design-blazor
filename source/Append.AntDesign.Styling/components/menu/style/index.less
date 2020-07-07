@@ -18,7 +18,7 @@
   background: @menu-bg;
   outline: none;
   box-shadow: @box-shadow-base;
-  transition: background 0.3s, width 0.2s;
+  transition: background 0.3s, width 0.3s cubic-bezier(0.2, 0, 0, 1) 0s;
   .clearfix;
 
   ul,
@@ -218,6 +218,7 @@
         right: 0;
         bottom: 0;
         left: 0;
+        z-index: -1;
         width: 100%;
         height: 100%;
         opacity: 0.0001;
@@ -323,9 +324,6 @@
   &-vertical-left &-submenu-selected,
   &-vertical-right &-submenu-selected {
     color: @menu-highlight-color;
-    a {
-      color: @menu-highlight-color;
-    }
   }
 
   &-horizontal {
