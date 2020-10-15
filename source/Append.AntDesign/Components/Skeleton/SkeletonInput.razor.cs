@@ -29,10 +29,5 @@ namespace Append.AntDesign.Components
         /// </summary>
         [Parameter]
         public SkeletonAvatarSize Size { get; set; } = SkeletonAvatarSize.Default;
-        /// <summary>
-        /// Set the shape of avatar
-        /// </summary>
-        [Parameter]
-        public SkeletonAvatarShape Shape { get; set; } = SkeletonAvatarShape.Default;
     }
 }
