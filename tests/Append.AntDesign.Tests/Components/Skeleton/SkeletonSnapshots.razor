@@ -1,0 +1,114 @@
+﻿@inherits TestComponentBase
+
+<SnapshotTest Description="Basic">
+    <TestInput>
+        <Skeleton />
+    </TestInput>
+    <ExpectedOutput>
+        <div class="ant-skeleton">
+            <div class="ant-skeleton-content">
+                <h3 class="ant-skeleton-title" style="width: 38%;"></h3>
+                <ul class="ant-skeleton-paragraph">
+                    <li></li>
+                    <li></li>
+                    <li style="width: 61%;"></li>
+                </ul>
+            </div>
+        </div>
+    </ExpectedOutput>
+</SnapshotTest>
+
+<SnapshotTest Description="Complex">
+    <TestInput>
+        <Skeleton Title="new SkeletonTitleProps { Width = 50 }" Avatar="new SkeletonAvatarProps()" Paragraph="new SkeletonParagraphProps { Rows = 4 }" />
+    </TestInput>
+    <ExpectedOutput>
+        <div class="ant-skeleton">
+            <div class="ant-skeleton-header">
+                <span class="ant-skeleton-avatar ant-skeleton-avatar-circle"></span>
+            </div>
+            <div class="ant-skeleton-content">
+                <h3 class="ant-skeleton-title" style="width: 50%;"></h3>
+                <ul class="ant-skeleton-paragraph">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li style="width: 61%;"></li>
+                </ul>
+            </div>
+        </div>
+    </ExpectedOutput>
+</SnapshotTest>
+
+<SnapshotTest Description="Active">
+    <TestInput>
+        <Skeleton Active />
+    </TestInput>
+    <ExpectedOutput>
+        <div class="ant-skeleton ant-skeleton-active">
+            <div class="ant-skeleton-content">
+                <h3 class="ant-skeleton-title" style="width: 38%;"></h3>
+                <ul class="ant-skeleton-paragraph">
+                    <li></li>
+                    <li></li>
+                    <li style="width: 61%;"></li>
+                </ul>
+            </div>
+        </div>
+    </ExpectedOutput>
+</SnapshotTest>
+
+<SnapshotTest Description="Button Large Round">
+    <TestInput>
+        <SkeletonButton Active="true" Size="SkeletonButtonSize.Large" Shape="SkeletonButtonShape.Round" />
+    </TestInput>
+    <ExpectedOutput>
+        <div class="ant-skeleton ant-skeleton-element ant-skeleton-active">
+            <span class="ant-skeleton-button ant-skeleton-button-lg ant-skeleton-button-round"></span>
+        </div>
+    </ExpectedOutput>
+</SnapshotTest>
+
+<SnapshotTest Description="Button Small Circle">
+    <TestInput>
+        <SkeletonButton Active="false" Size="SkeletonButtonSize.Small" Shape="SkeletonButtonShape.Circle" />
+    </TestInput>
+    <ExpectedOutput>
+        <div class="ant-skeleton ant-skeleton-element">
+            <span class="ant-skeleton-button ant-skeleton-button-sm ant-skeleton-button-circle"></span>
+        </div>
+    </ExpectedOutput>
+</SnapshotTest>
+
+<SnapshotTest Description="Avatar Large Square">
+    <TestInput>
+        <SkeletonAvatar Active="true" Size="SkeletonAvatarSize.Large" Shape="SkeletonAvatarShape.Square" />
+    </TestInput>
+    <ExpectedOutput>
+        <div class="ant-skeleton ant-skeleton-element ant-skeleton-active">
+            <span class="ant-skeleton-avatar ant-skeleton-avatar-lg ant-skeleton-avatar-square"></span>
+        </div>
+    </ExpectedOutput>
+</SnapshotTest>
+
+<SnapshotTest Description="Avatar Small Circle">
+    <TestInput>
+        <SkeletonAvatar Active="false" Size="SkeletonAvatarSize.Small" Shape="SkeletonAvatarShape.Circle" />
+    </TestInput>
+    <ExpectedOutput>
+        <div class="ant-skeleton ant-skeleton-element">
+            <span class="ant-skeleton-avatar ant-skeleton-avatar-sm ant-skeleton-avatar-circle"></span>
+        </div>
+    </ExpectedOutput>
+</SnapshotTest>
+
+<SnapshotTest Description="Input Large">
+    <TestInput>
+        <SkeletonInput Active="false" Size="SkeletonAvatarSize.Small" Style="width: 200px;" />
+    </TestInput>
+    <ExpectedOutput>
+        <div class="ant-skeleton ant-skeleton-element">
+            <span class="ant-skeleton-input ant-skeleton-input-sm" style="width: 200px;"></span>
+        </div>
+    </ExpectedOutput>
+</SnapshotTest>
