@@ -42,22 +42,22 @@ SkeletonParagraphProps
 | Property | Description | Type | Default |
 | --- | --- | --- | --- |
 | Rows | Set the row count of paragraph | integer | 3 |
-| Width | Set the width of paragraphs. Set the width of each row, if only one sets the last row width | Array<integer> | 68% |
+| Width | Set the width of paragraphs. Set the width of each row, or if single value in array sets the last row width | Array<integer> | 68% |
 
 SkeletonButtonProps
 
 | Property | Description | Type | Default |
 | --- | --- | --- | --- |
 | Active | Show animation effect | boolean | false |
-| Size | Set the size of button | ButtonSize | - |
-| Shape | Set the shape of button | ButtonShape | - |
+| Size | Set the size of button | SkeletonButtonSize | - |
+| Shape | Set the shape of button | SkeletonButtonShape | - |
 
 SkeletonInputProps
 
 | Property | Description | Type | Default |
 | --- | --- | --- | --- |
 | Active | Show animation effect | boolean | false |
-| Size | Set the size of input | InputSize | - |
+| Size | Set the size of input | SkeletonInputSize | - |
 
 
 ## FAQ

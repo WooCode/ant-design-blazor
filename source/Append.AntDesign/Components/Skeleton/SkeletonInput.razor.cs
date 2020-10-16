@@ -14,8 +14,8 @@ namespace Append.AntDesign.Components
 
         private ClassBuilder inputClasses => ClassBuilder.Create(Class)
             .AddClass($"{prefix}-input")
-            .AddClassWhen($"{prefix}-input-lg", Size == SkeletonAvatarSize.Large)
-            .AddClassWhen($"{prefix}-input-sm", Size == SkeletonAvatarSize.Small);
+            .AddClassWhen($"{prefix}-input-lg", Size == SkeletonInputSize.Large)
+            .AddClassWhen($"{prefix}-input-sm", Size == SkeletonInputSize.Small);
 
         private StyleBuilder inputStyles => StyleBuilder.Create(Style);
 
@@ -28,6 +28,6 @@ namespace Append.AntDesign.Components
         /// Set the size of avatar
         /// </summary>
         [Parameter]
-        public SkeletonAvatarSize Size { get; set; } = SkeletonAvatarSize.Default;
+        public SkeletonInputSize Size { get; set; } = SkeletonInputSize.Default;
     }
 }

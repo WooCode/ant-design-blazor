@@ -9,7 +9,7 @@
             <SkeletonButton Active="this.isLoading" Size="this.buttonSize" Shape="this.buttonShape" />
             <SkeletonButton Active="this.isLoading" Size="this.buttonSize" Shape="this.buttonShape" />
             <SkeletonAvatar Active="this.isLoading" Size="this.avatarSize" Shape="this.avatarShape" />
-            <SkeletonInput Active="this.isLoading" Size="this.avatarSize" Style="width: 200px;" />
+            <SkeletonInput Active="this.isLoading" Size="this.inputSize" Style="width: 200px;" />
         </div>
         <div>
             @*<SkeletonImage />*@
@@ -52,6 +52,7 @@
     private SkeletonButtonShape buttonShape { get; set; } = SkeletonButtonShape.Default;
     private SkeletonAvatarSize avatarSize { get; set; } = SkeletonAvatarSize.Default;
     private SkeletonAvatarShape avatarShape { get; set; } = SkeletonAvatarShape.Circle;
+    private SkeletonInputSize inputSize { get; set; } = SkeletonInputSize.Default;
 
     private void HandleActiveChange()
     {
@@ -65,14 +66,17 @@
             case "default":
                 this.buttonSize = SkeletonButtonSize.Default;
                 this.avatarSize = SkeletonAvatarSize.Default;
+                this.inputSize = SkeletonInputSize.Default;
                 break;
             case "large":
                 this.buttonSize = SkeletonButtonSize.Large;
                 this.avatarSize = SkeletonAvatarSize.Large;
+                this.inputSize = SkeletonInputSize.Large;
                 break;
             case "small":
                 this.buttonSize = SkeletonButtonSize.Small;
                 this.avatarSize = SkeletonAvatarSize.Small;
+                this.inputSize = SkeletonInputSize.Small;
                 break;
         }
     }
