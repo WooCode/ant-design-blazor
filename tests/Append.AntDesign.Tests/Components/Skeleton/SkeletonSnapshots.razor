@@ -102,13 +102,24 @@
     </ExpectedOutput>
 </SnapshotTest>
 
-<SnapshotTest Description="Input Large">
+<SnapshotTest Description="Input Small">
     <TestInput>
-        <SkeletonInput Active="false" Size="SkeletonAvatarSize.Small" Style="width: 200px;" />
+        <SkeletonInput Active="false" Size="SkeletonInputSize.Small" Style="width: 200px;" />
     </TestInput>
     <ExpectedOutput>
         <div class="ant-skeleton ant-skeleton-element">
             <span class="ant-skeleton-input ant-skeleton-input-sm" style="width: 200px;"></span>
+        </div>
+    </ExpectedOutput>
+</SnapshotTest>
+
+<SnapshotTest Description="Input Large">
+    <TestInput>
+        <SkeletonInput Active="false" Size="SkeletonInputSize.Large" Style="width: 200px;" />
+    </TestInput>
+    <ExpectedOutput>
+        <div class="ant-skeleton ant-skeleton-element">
+            <span class="ant-skeleton-input ant-skeleton-input-lg" style="width: 200px;"></span>
         </div>
     </ExpectedOutput>
 </SnapshotTest>
