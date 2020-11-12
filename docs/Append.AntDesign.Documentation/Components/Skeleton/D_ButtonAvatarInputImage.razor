@@ -11,8 +11,9 @@
             <SkeletonAvatar Active="this.isLoading" Size="this.avatarSize" Shape="this.avatarShape" />
             <SkeletonInput Active="this.isLoading" Size="this.inputSize" Style="width: 200px;" />
         </div>
+        <br />
         <div>
-            @*<SkeletonImage />*@
+            <SkeletonImage />
         </div>
         <Divider />
         <form layout="inline" style="margin: 16px 0;">
@@ -30,7 +31,7 @@
             </div>
             <div style="display: inline-block;">
                 <div>Button Shape</div>
-                <RadioGroup DefaultValue="default" OnChange="this.HandleButtonShapeChange">
+                <RadioGroup DefaultValue="round" OnChange="this.HandleButtonShapeChange">
                     <RadioButton Value="default">Default</RadioButton>
                     <RadioButton Value="round">Round</RadioButton>
                     <RadioButton Value="circle">Circle</RadioButton>
@@ -38,7 +39,7 @@
             </div>
             <div style="display: inline-block;">
                 <div>Avatar Shape</div>
-                <RadioGroup DefaultValue="circle" OnChange="this.HandleAvatarShapeChange">
+                <RadioGroup DefaultValue="square" OnChange="this.HandleAvatarShapeChange">
                     <RadioButton Value="square">Square</RadioButton>
                     <RadioButton Value="circle">Circle</RadioButton>
                 </RadioGroup>
@@ -49,9 +50,9 @@
 @code {
     private bool isLoading { get; set; } = false;
     private SkeletonButtonSize buttonSize { get; set; } = SkeletonButtonSize.Default;
-    private SkeletonButtonShape buttonShape { get; set; } = SkeletonButtonShape.Default;
+    private SkeletonButtonShape buttonShape { get; set; } = SkeletonButtonShape.Round;
     private SkeletonAvatarSize avatarSize { get; set; } = SkeletonAvatarSize.Default;
-    private SkeletonAvatarShape avatarShape { get; set; } = SkeletonAvatarShape.Circle;
+    private SkeletonAvatarShape avatarShape { get; set; } = SkeletonAvatarShape.Square;
     private SkeletonInputSize inputSize { get; set; } = SkeletonInputSize.Default;
 
     private void HandleActiveChange()
