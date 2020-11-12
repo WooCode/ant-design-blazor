@@ -89,7 +89,14 @@
         if (this.IsLoading)
         {
             return @<ListItem>
-                <Skeleton Loading="true" Paragraph="new SkeletonParagraphProps {Rows = 2}" />
+                <Skeleton
+                    Avatar="new SkeletonAvatarProps { Active = true,
+                                                        Shape = SkeletonAvatarShape.Circle,
+                                                        Size = SkeletonAvatarSize.Large
+                            }"
+                    Loading="true"
+                    Paragraph="new SkeletonParagraphProps {Rows = 2, Width = new int[] { 100, 100 } }"
+                />
             </ListItem>;
         }
         else
