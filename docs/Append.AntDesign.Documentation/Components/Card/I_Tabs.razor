@@ -1,0 +1,57 @@
+﻿<Codebox Title="With tabs">
+    <Description>
+        <p>More content can be hosted.</p>
+    </Description>
+    <Demo>
+        <Card Title="Card title" Extra="extra" TabList="GetTabs()" ActiveTabKey="@activeKey" Bordered Style="width:100%;">
+            @contentList[@activeKey]
+        </Card>
+
+        <Card Title="Card title" Extra="extra" Bordered Style="width:300px;margin-top: 15px;">
+            <p style="margin:0;">Card content</p>
+            <p style="margin:0;">Card content</p>
+            <p style="margin:0;">Card content</p>
+        </Card>
+    </Demo>
+</Codebox>
+
+@code {
+
+    RenderFragment extra =@<a href='#'>More</a>;
+
+    static string activeKey = "Tab 1";
+
+
+    private List<CardTab> GetTabs()
+    {
+        CardTab tab1 = new CardTab
+        {
+            Key = "Tab 1",
+            Tab = "Tab 1"
+        };
+        CardTab tab2 = new CardTab
+        {
+            Key = "Tab 2",
+            Tab = "Tab 2"
+        };
+        CardTab tab3 = new CardTab
+        {
+            Key = "Tab 3",
+            Tab = "Tab 3"
+        };
+
+
+        return new List<CardTab> { tab1, tab2, tab3 };
+    }
+
+    static Dictionary<string,RenderFragment> contentList = GetContent();
+
+    private static Dictionary<string, RenderFragment> GetContent()
+    {
+        RenderFragment content1 = @<p>Content 1 </p>;
+        RenderFragment content2 = @<p>Content 2 </p>;
+
+        return new Dictionary<string, RenderFragment> { {"Tab 1", content1 }, { "Tab 2", content2 } };
+    }
+
+    } 

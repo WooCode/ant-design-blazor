@@ -1,0 +1,33 @@
+﻿@namespace Append.AntDesign.Components
+@inherits AntComponent
+
+<div class="ant-tabs ant-tabs-top ant-tabs-large ant-card-head-tabs">
+    <div role="tablist" class="ant-tabs-nav">
+        <div class="ant-tabs-nav-wrap">
+            <div class="ant-tabs-nav-list" style="transform: translate(0px, 0px);">
+                @foreach (var tab in TabList)
+                {
+                    <div class="ant-tabs-tab @(ActiveTabKey == tab.Key ? "ant-tabs-tab-active" : "")" @onclick="@tab.OnClick">
+                        <div role="tab" class="ant-tabs-tab-btn">@tab.Key</div>
+                    </div>
+                }
+                <div class="ant-tabs-ink-bar ant-tabs-ink-bar-animated" style="left: 0px; width: 34px;"></div>
+            </div>
+        </div>
+        <div class="ant-tabs-nav-operations ant-tabs-nav-operations-hidden">
+            <button type="button" class="ant-tabs-nav-more" tabindex="-1" aria-hidden="true" aria-haspopup="listbox" aria-controls="rc-tabs-18-more-popup" id="rc-tabs-18-more" aria-expanded="false" style="visibility: hidden; order: 1;">
+                <span role="img" aria-label="ellipsis" class="anticon anticon-ellipsis">
+                    <svg viewBox="64 64 896 896" focusable="false" data-icon="ellipsis" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                        <path d="M176 511a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0zm280 0a56 56 0 10112 0 56 56 0 10-112 0z"></path>
+                    </svg>
+                </span>
+            </button>
+        </div>
+    </div>
+    <div class="ant-tabs-content-holder">
+        <div class="ant-tabs-content ant-tabs-content-top">
+            <div role="tabpanel" tabindex="0" aria-hidden="false" class="ant-tabs-tabpane ant-tabs-tabpane-active" id="rc-tabs-18-panel-tab1" aria-labelledby="rc-tabs-18-tab-tab1" style=""></div>
+            <div role="tabpanel" tabindex="-1" aria-hidden="true" class="ant-tabs-tabpane" id="rc-tabs-18-panel-tab2" aria-labelledby="rc-tabs-18-tab-tab2" style="display: none;"></div>
+        </div>
+    </div>
+</div>

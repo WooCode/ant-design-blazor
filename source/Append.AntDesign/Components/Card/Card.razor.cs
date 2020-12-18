@@ -13,8 +13,9 @@ namespace Append.AntDesign.Components
             .AddClassWhen($"{prefix}-bordered", Bordered)
             .AddClassWhen($"{prefix}-hoverable", Hoverable)
             .AddClassWhen($"{prefix}-loading", Loading)
-            .AddClassWhen($"{prefix}-type-small", Type == CardType.Small)
-            .AddClassWhen($"{prefix}-type-inner", Type == CardType.Inner);
+            .AddClassWhen($"{prefix}-type-inner", Type == CardType.Inner)
+            .AddClassWhen($"{prefix}-{Type}", Type == CardType.Small)
+            .AddClassWhen($"{prefix}-contain-tabs", TabList.Count > 0);
 
         [Parameter] public bool Bordered { get; set; } = true;
         [Parameter] public string Title { get; set; }
@@ -25,10 +26,14 @@ namespace Append.AntDesign.Components
         [Parameter] public string HeadStyle { get; set; }
         [Parameter] public string BodyStyle { get; set; }
 
+        [Parameter] public string ActiveTabKey { get; set; }
+        [Parameter] public string DefaultActiveTabKey { get; set; }
+
         [Parameter] public RenderFragment ChildContent { get; set; }
         [Parameter] public RenderFragment Extra { get; set; }
         [Parameter] public RenderFragment Cover { get; set; }
 
         [Parameter] public List<RenderFragment> Actions { get; set; } = new List<RenderFragment>();
+        [Parameter] public List<CardTab> TabList { get; set; } = new List<CardTab>();
     }
 }
