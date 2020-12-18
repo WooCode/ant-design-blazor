@@ -1,0 +1,20 @@
+﻿<Codebox Title="Grid card">
+    <Description>
+        <p>Grid style card content.</p>
+    </Description>
+    <Demo>
+        <Card Title="Card Title">
+            <CardGrid Style="@{gridStyle}">Content</CardGrid>
+            <CardGrid Hoverable="false" Style="@{gridStyle}">Content</CardGrid>
+            <CardGrid Style="@{gridStyle}">Content</CardGrid>
+            <CardGrid Style="@{gridStyle}">Content</CardGrid>
+            <CardGrid Style="@{gridStyle}">Content</CardGrid>
+            <CardGrid Style="@{gridStyle}">Content</CardGrid>
+            <CardGrid Style="@{gridStyle}">Content</CardGrid>
+        </Card>
+    </Demo>
+</Codebox>
+
+@code {
+    string gridStyle = "width: 25%; text-align: center;";
+}

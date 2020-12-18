@@ -15,7 +15,7 @@ namespace Append.AntDesign.Components
             .AddClassWhen($"{prefix}-loading", Loading)
             .AddClassWhen($"{prefix}-{Type}", Type == CardType.Small);
 
-        [Parameter] public bool Bordered { get; set; }
+        [Parameter] public bool Bordered { get; set; } = true;
         [Parameter] public string Title { get; set; }
         [Parameter] public bool Loading { get; set; }
         [Parameter] public bool Hoverable { get; set; }
@@ -23,7 +23,6 @@ namespace Append.AntDesign.Components
 
         [Parameter] public string HeadStyle { get; set; }
         [Parameter] public string BodyStyle { get; set; }
-        [Parameter] public string Style { get; set; }
 
         [Parameter] public RenderFragment ChildContent { get; set; }
         [Parameter] public RenderFragment Extra { get; set; }
