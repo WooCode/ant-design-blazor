@@ -1,0 +1,15 @@
+﻿<Codebox Title="Inner card">
+    <Description>
+        <p>It can be placed inside the ordinary card to display the information of the multilevel structure.</p>
+    </Description>
+    <Demo>
+        <Card Title="Card Title">
+            <Card Type="CardType.Inner" Title="Inner Card title" Extra="extra">Inner Card content</Card>
+            <Card Type="CardType.Inner" Title="Inner Card title" Extra="extra" style="margin-top: 16px">Inner Card content</Card>
+        </Card>
+    </Demo>
+</Codebox>
+
+@code {
+    RenderFragment extra =@<a href='#'>More</a>;
+}
