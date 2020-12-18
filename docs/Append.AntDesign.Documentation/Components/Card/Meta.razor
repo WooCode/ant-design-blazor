@@ -1,0 +1,14 @@
+﻿<Codebox Title="Customized content">
+    <Description>
+        <p>You can use <code>Card.Meta</code> to support more flexible content.</p>
+    </Description>
+    <Demo>
+        <Card Style="width:240px;" Cover="cover" Bordered Hoverable>
+            <CardMeta Title="Europe Street beat" Description="www.instagram.com" />
+        </Card>
+    </Demo>
+</Codebox>
+
+@code {
+    RenderFragment cover =@<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />;
+} 

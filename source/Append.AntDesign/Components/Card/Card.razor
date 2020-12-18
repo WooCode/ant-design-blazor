@@ -1,11 +1,40 @@
 ﻿@namespace Append.AntDesign.Components
 @inherits AntComponent
 
-<div class="@Classes" style="width:300px;">
-    <div class="ant-card-head">
-        hej
-    </div>
+<div class="@Classes" style="@Style">
+    @if (!string.IsNullOrEmpty(Title))
+    {
+        <div class="ant-card-head">
+            <div class="ant-card-head-wrapper">
+                <div class="ant-card-head-title">
+                    @Title
+                </div>               
+
+                @if (Extra != null)
+                {
+                    <div class="ant-card-extra">
+                        @Extra
+                    </div>
+                }
+            </div>
+        </div>
+    }
+    @if(Cover != null)
+    {
+        <div class="ant-card-cover">
+            @Cover
+        </div>
+    }
     <div class="ant-card-body">
-        hej
+        @ChildContent
     </div>
+    @if (Actions.Any())
+    {
+        <ul class="ant-card-actions">
+            @foreach (var action in Actions)
+            {
+                <li style="width: 33.3333%;">@action</li>
+            }
+        </ul>
+    }
 </div>

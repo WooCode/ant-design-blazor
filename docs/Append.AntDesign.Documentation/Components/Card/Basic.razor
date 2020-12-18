@@ -1,8 +1,23 @@
 ﻿<Codebox Title="Basic">
     <Description>
-        <p>There are <code>primary</code> button, <code>default</code> button, <code>dashed</code> button and <code>link</code> button in antd.</p>
+        <p>A basic card containing a title, content and an extra corner content. Supports two sizes: <code>default</code> and <code>small</code>.</p>
     </Description>
     <Demo>
-        <Card Text="Hej hej" Bordered></Card>
+        <Card Title="Card title" Extra="extra" Bordered Style="width:300px;">
+            <p style="margin:0;">Card content</p>
+            <p style="margin:0;">Card content</p>
+            <p style="margin:0;">Card content</p>
+        </Card>
+
+        <Card Title="Card title" Extra="extra" Bordered Type="@CardType.Small" Style="width:300px;margin-top: 15px;">
+            <p style="margin:0;">Card content</p>
+            <p style="margin:0;">Card content</p>
+            <p style="margin:0;">Card content</p>
+        </Card>
     </Demo>
 </Codebox>
+
+
+@code {
+    RenderFragment extra = @<a href='#'>More</a>;
+}

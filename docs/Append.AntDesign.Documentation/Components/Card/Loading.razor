@@ -1,0 +1,29 @@
+﻿<Codebox Title="Loading Card">
+    <Description>
+        <p>Shows a loading indicator while the contents of the card is being fetched.</p>
+    </Description>
+    <Demo>
+        <Card style="width:300px;" Bordered>
+            <CardMeta Title="Card title" Description="This is the description" Avatar="avatar" />
+        </Card>
+
+        <Card style="width:300px;margin-top:15px;" Actions="GetActions()" Bordered>
+            <CardMeta Title="Card title" Description="This is the description" Avatar="avatar" />
+        </Card>
+    </Demo>
+</Codebox>
+
+@code {
+    RenderFragment cover =@<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />;
+    RenderFragment avatar = @<Avatar ImageSource="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png" />;
+
+    private List<RenderFragment> GetActions()
+    {
+        RenderFragment firstIcon = @<Icon Type="IconType.Outlined.Home" />;
+        RenderFragment secondIcon = @<Icon Type="IconType.Outlined.Home" />;
+        RenderFragment thirdIcon = @<Icon Type="IconType.Outlined.Home" />;
+
+        return new List<RenderFragment>(new[] { firstIcon, secondIcon, thirdIcon });
+    }
+
+} 
