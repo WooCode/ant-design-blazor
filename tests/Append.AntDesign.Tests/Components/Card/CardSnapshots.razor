@@ -31,3 +31,45 @@
         </div>
     </ExpectedOutput>
 </SnapshotTest>
+
+<SnapshotTest Description="Inner card">
+    <TestInput>
+        <Card Title="Card title">
+            <Card Type="CardType.Inner" Title="Inner Card title" Extra="extra">Inner Card content</Card>
+            <Card Type="CardType.Inner" Title="Inner Card title" Extra="extra" style="margin-top: 16px;">Inner Card content</Card>
+        </Card>
+    </TestInput>
+    <ExpectedOutput>
+        <div class="ant-card ant-card-bordered">
+            <div class="ant-card-head">
+                <div class="ant-card-head-wrapper">
+                    <div class="ant-card-head-title">Card title</div>
+                </div>
+            </div>
+            <div class="ant-card-body">
+                <div class="ant-card ant-card-bordered ant-card-type-inner">
+                    <div class="ant-card-head">
+                        <div class="ant-card-head-wrapper">
+                            <div class="ant-card-head-title">Inner Card title</div>
+                            <div class="ant-card-extra"><a href="#">More</a></div>
+                        </div>
+                    </div>
+                    <div class="ant-card-body">Inner Card content</div>
+                </div>
+                <div class="ant-card ant-card-bordered ant-card-type-inner" style="margin-top: 16px;">
+                    <div class="ant-card-head">
+                        <div class="ant-card-head-wrapper">
+                            <div class="ant-card-head-title">Inner Card title</div>
+                            <div class="ant-card-extra"><a href="#">More</a></div>
+                        </div>
+                    </div>
+                    <div class="ant-card-body">Inner Card content</div>
+                </div>
+            </div>
+        </div>
+    </ExpectedOutput>
+</SnapshotTest>
+
+@code {
+    RenderFragment extra =@<a href='#'>More</a>;
+}

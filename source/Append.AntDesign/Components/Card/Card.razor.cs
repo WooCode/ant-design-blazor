@@ -13,7 +13,8 @@ namespace Append.AntDesign.Components
             .AddClassWhen($"{prefix}-bordered", Bordered)
             .AddClassWhen($"{prefix}-hoverable", Hoverable)
             .AddClassWhen($"{prefix}-loading", Loading)
-            .AddClassWhen($"{prefix}-type-{Type}", Type != CardType.Default);
+            .AddClassWhen($"{prefix}-type-small", Type == CardType.Small)
+            .AddClassWhen($"{prefix}-type-inner", Type == CardType.Inner);
 
         [Parameter] public bool Bordered { get; set; } = true;
         [Parameter] public string Title { get; set; }
